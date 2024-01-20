@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity() {
                }
 
             }
+            pushFragment(fragment)
             true
         }
         viewBinding.content.bottomNav.selectedItemId=R.id.navigation_quraan

@@ -7,10 +7,6 @@ import com.example.islamicapp.databinding.ItemChapterTitleBinding
 
 class ChapterRecyclerAdapter(private val chapterList: List<String>):RecyclerView.Adapter<ChapterRecyclerAdapter.ViewHolder>() {
 
-
-
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
        val viewBinding:ItemChapterTitleBinding =ItemChapterTitleBinding.inflate(LayoutInflater.from(parent.context),parent,false)
         return ViewHolder(viewBinding)

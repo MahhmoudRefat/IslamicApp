@@ -7,22 +7,30 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.islamicapp.databinding.FragmentQuraanBinding
 
-class QuraanFragment :Fragment(){
-lateinit var viewBinding:FragmentQuraanBinding
-    lateinit var adapter : ChapterRecyclerAdapter
+class QuraanFragment : Fragment() {
+    lateinit var viewBinding: FragmentQuraanBinding
+    lateinit var adapter: ChapterRecyclerAdapter
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        viewBinding=FragmentQuraanBinding.inflate(inflater,container,false)
-        return  viewBinding.root
+        viewBinding = FragmentQuraanBinding.inflate(inflater, container, false)
+        return viewBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initChapterRecycler()
     }
+
+
+    private fun initChapterRecycler() {
+        adapter = ChapterRecyclerAdapter(suranames)
+        viewBinding.chapterRecycler.adapter = adapter
+
+    }
+
     var suranames = listOf(
         "الفاتحه",
         "البقرة",
@@ -139,10 +147,4 @@ lateinit var viewBinding:FragmentQuraanBinding
         "الفلق",
         "الناس"
     )
-
-    private fun initChapterRecycler() {
-        adapter = ChapterRecyclerAdapter(suranames)
-        viewBinding.chapterRecycler.adapter=adapter
-
-    }
 }
