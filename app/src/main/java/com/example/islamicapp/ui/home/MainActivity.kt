@@ -44,6 +44,7 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
+        viewBinding.content.bottomNav.selectedItemId=R.id.navigation_quraan
     }
 private fun pushFragment(fragment: Fragment){
     supportFragmentManager
