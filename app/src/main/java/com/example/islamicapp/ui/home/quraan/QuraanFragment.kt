@@ -1,11 +1,14 @@
 package com.example.islamicapp.ui.home.quraan
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.islamicapp.databinding.FragmentQuraanBinding
+import com.example.islamicapp.ui.Constant
+import com.example.islamicapp.ui.suradetails.ChapterDetailsActivity
 
 class QuraanFragment : Fragment() {
     lateinit var viewBinding: FragmentQuraanBinding
@@ -27,8 +30,18 @@ class QuraanFragment : Fragment() {
 
     private fun initChapterRecycler() {
         adapter = ChapterRecyclerAdapter(suranames)
+        adapter.onitemclicklistenr = ChapterRecyclerAdapter.OnItemClickListenr{
+            item,position ->StartSurahDetailsActivity(item,position)
+        }
         viewBinding.chapterRecycler.adapter = adapter
 
+    }
+
+    private fun StartSurahDetailsActivity(title: String, position: Int) {
+        val intent = Intent(activity, ChapterDetailsActivity::class.java)
+        intent.putExtra(Constant.chapter_index , position+1)
+        intent.putExtra(Constant.chapter_title , title)
+        startActivity(intent)
     }
 
     var suranames = listOf(
