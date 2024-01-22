@@ -34,6 +34,7 @@ class HadethFragment : Fragment() {
         val inputestreem = context?.assets?.open("ahadeeth.txt")
         val filecontent = inputestreem?.bufferedReader().use { it?.readText() }
         val allahadeth = filecontent?.trim()?.split("#")
+
         allahadeth?.forEach { hadeth ->
             val lines = hadeth.trim().split("\n")
 
@@ -44,6 +45,7 @@ class HadethFragment : Fragment() {
             val content = newList.joinToString("\n")
             val hadeth = Hadeth(title, content)
             hadethlist.add(hadeth)
+
         }
         showHadethList(hadethlist)
     }
@@ -58,7 +60,7 @@ class HadethFragment : Fragment() {
 
     private fun startHadethDetailsScreen(hadeth: Hadeth) {
         val intent = Intent(activity, HadethDetailsAvtivity::class.java)
-        intent.putExtra(Constant.HadethExtra,hadeth)
+        intent.putExtra(Constant.HadethExtra, hadeth)
         startActivity(intent)
     }
 }

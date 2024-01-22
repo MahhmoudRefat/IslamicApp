@@ -36,6 +36,7 @@ class ChapterDetailsActivity : AppCompatActivity() {
 
     private fun initViews() {
         viewBinding.tvTitle.text = chaptertitle
+
         setTitle(null)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
