@@ -4,4 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="colorPrimary">#B7935F</color>
     <color name="transbarent">#00000000</color>
+    <color name="number_tasbeh">#C8B396</color>
+    <color name="zekr_word_background">#B6925F</color>
 </resources>

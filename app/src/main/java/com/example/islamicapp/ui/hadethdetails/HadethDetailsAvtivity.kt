@@ -17,8 +17,9 @@ class HadethDetailsAvtivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         viewBindin = ActivityHadethDetailsAvtivityBinding.inflate(layoutInflater)
         setContentView(viewBindin.root)
-        initviews()
         getHadith()
+        initviews()
+
     }
 
     private fun initviews() {
