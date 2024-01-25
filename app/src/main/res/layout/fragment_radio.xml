@@ -37,7 +37,6 @@
         android:layout_height="120dp"
         android:adjustViewBounds="true"
         android:src="@drawable/playbutton"
-        android:background="@drawable/rudios"
         app:layout_constraintEnd_toEndOf="parent"
         android:padding="20dp"
         app:layout_constraintStart_toStartOf="parent"
