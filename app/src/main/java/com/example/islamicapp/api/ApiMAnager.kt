@@ -9,9 +9,12 @@ object ApiMAnager {
     lateinit var retrofit: Retrofit
 
     init {
+        //interceptor
         val logging = HttpLoggingInterceptor()
         logging.setLevel(HttpLoggingInterceptor.Level.BODY)
+
         val client = OkHttpClient.Builder().addInterceptor(logging).build()
+
         retrofit = Retrofit.Builder().client(client).baseUrl("http://mp3quran.net")
             .addConverterFactory(GsonConverterFactory.create()).build()
     }

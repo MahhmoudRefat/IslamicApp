@@ -32,7 +32,11 @@ class RadioFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val player = ExoPlayer.Builder(requireContext()).build()
+
+        
+
+
+       /* val player = ExoPlayer.Builder(requireContext()).build()
         val defultHttpDataSourceFactory = DefaultHttpDataSource.Factory()
         val mdeiaitem = MediaItem.fromUri("https://backup.qurango.net/radio/sahl_yassin")
         val mediaSource = ProgressiveMediaSource.Factory(defultHttpDataSourceFactory).createMediaSource(mdeiaitem)
@@ -50,7 +54,7 @@ class RadioFragment : Fragment() {
         }
 
         player.playWhenReady= true
-
+*/
        /* viewBinding.playBtn.isEnabled = false
         mediaplayer.setAudioStreamType(AudioManager.STREAM_MUSIC)
         viewBinding.playBtn.setOnClickListener{*/
