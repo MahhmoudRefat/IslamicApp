@@ -6,7 +6,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiMAnager {
-    lateinit var retrofit: Retrofit
+    private var retrofit: Retrofit
 
     init {
         //interceptor
@@ -15,7 +15,7 @@ object ApiMAnager {
 
         val client = OkHttpClient.Builder().addInterceptor(logging).build()
 
-        retrofit = Retrofit.Builder().client(client).baseUrl("http://mp3quran.net")
+        retrofit = Retrofit.Builder().client(client).baseUrl("https://mp3quran.net/")
             .addConverterFactory(GsonConverterFactory.create()).build()
     }
 
