@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 tools:text="@tools:sample/lorem/random"
-                android:textSize="18sp" />
+                android:textSize="17sp" />
         </ScrollView>
     </androidx.cardview.widget.CardView>
 
